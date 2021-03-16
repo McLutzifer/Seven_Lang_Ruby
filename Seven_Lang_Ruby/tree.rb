@@ -15,3 +15,12 @@ class Tree
     block.call self
   end
 end
+
+ruby_tree = Tree.new( "Ruby", [Tree.new("Reia"), Tree.new("McRuby")] )
+
+puts "Visiting a node"
+ruby_tree.visit { |node| puts.node.node_name}
+puts
+
+puts "visiting entire tree"
+ruby_tree.visit_all { |node| puts node.node_name}
